@@ -1,13 +1,15 @@
 version: '2'
 services:
-    producer:
+    consumer:
         build: .
-        container_name: "rancher-producer"
+        container_name: "rancher-consumer"
         network_mode: "host"
         restart: always
         environment:
-            SPRING_PROFILES_ACTIVE: home
-            SPRING_CLOUD_CONFIG_URI: http://192.168.1.229:63663
+            SPRING_PROFILES_ACTIVE: default
+            SPRING_CLOUD_CONFIG_URI: http://54.186.151.15:63500
+            SPRING_RABBITMQ_HOST: 54.187.67.220
+            SPRING_DATA_MONGODB_HOST: 54.187.67.220
             JVM_HEAP_MAX: 768m
             JVM_JMX_HOST: 127.0.0.1
             JVM_JMX_PORT: 1999

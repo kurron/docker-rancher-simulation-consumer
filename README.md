@@ -1,5 +1,5 @@
 # Overview
-This project is a Docker image that runs [Rancher Simulation Producer](https://github.com/kurron/rancher-simulation-producer) server.
+This project is a Docker image that runs [Rancher Simulation Consumer](https://github.com/kurron/rancher-simulation-consumer) server.
 
 # Prerequisites
 * a working [Docker](http://docker.io) engine
