@@ -1,0 +1,13 @@
+version: '2'
+services:
+    producer:
+        build: .
+        container_name: "rancher-producer"
+        network_mode: "host"
+        restart: always
+        environment:
+            SPRING_PROFILES_ACTIVE: home
+            SPRING_CLOUD_CONFIG_URI: http://192.168.1.229:63663
+            JVM_HEAP_MAX: 768m
+            JVM_JMX_HOST: 127.0.0.1
+            JVM_JMX_PORT: 1999
